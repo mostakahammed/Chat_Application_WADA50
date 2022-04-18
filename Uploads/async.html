@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Asynchronus</title>
+<style>
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+#overlay{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100vh;
+background-color: green;
+display: flex;
+justify-content: center;
+align-items: center;
+display: none;
+}
+#box{
+margin: 150px auto 100px auto;
+width: 450px;
+height: 450px;
+padding: 60px;
+border-radius: 50%;
+background-color: red;
+display: none;
+text-align: center;
+}
+#txt{
+margin: 100px auto 20px auto;
+color: #fff;
+font-size: 2rem;
+}
+#show{
+padding: 10px;
+}
+#close{
+width: 30%;
+padding: 10px;
+}
+</style>
+</head>
+
+<body>
+<button id="show">Show</button>
+<div id="overlay">
+<div id="box">
+<div id="txt">Question 02</div>
+<button id="close">CLose</button>
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(()=>{
+
+$('#show').click(function(){
+$('#overlay').show(500).promise()
+.then(function(){
+$('#box').slideDown(500);
+});
+});
+});
+
+
+$('#close').click(function(){
+$('#box').slideUp(500).promise()
+.then(function(){
+$('#overlay').hide(500);
+});
+});
+
+</script>
+
+</body>
+</html>
+
+

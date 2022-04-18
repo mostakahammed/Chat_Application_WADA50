@@ -1,0 +1,400 @@
+/* Import Font  */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/* CSS Variable for color */
+:root {
+  --bg-color: #3d434b;
+  --dark-color-a: #212529;
+  --dark-color-b: #2a2e32;
+  --light-color: #e6e9ff;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+/* Basic Reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: var(--bg-color);
+  margin: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Join Page  */
+/* Join Page */
+.join-container {
+  max-width: 500px;
+  margin: 150px auto;
+  color: #fff;
+}
+
+.join-header {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-color-a);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.join-main {
+  padding: 30px 40px;
+  background: var(--dark-color-b);
+}
+
+.join-main p {
+  margin-bottom: 20px;
+}
+
+.join-main .form-control {
+  margin-bottom: 20px;
+}
+
+.join-main input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main select {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main .btn__join {
+  padding: 11px 15px;
+  background-color: var(--success-color);
+  border: 1px solid var(--success-color);
+  color: var(--light-color);
+  cursor: pointer;
+  width: 100%;
+}
+.btn__send {
+  padding: 11px 15px;
+  background-color: var(--success-color);
+  border: 1px solid var(--success-color);
+  color: var(--light-color);
+  cursor: pointer;
+}
+.btn__leave {
+  background-color: var(--error-color);
+  padding: 8px 12px;
+  color: var(--light-color);
+}
+.form-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer__section {
+  text-align: center;
+  color: var(--light-color);
+  width: 95%;
+  position: absolute;
+  bottom: 20px;
+}
+/* Join Page ENd */
+
+/* ========================================================= */
+
+/* Chat section 
+/* Chat Page */
+
+.chat-container {
+  max-width: calc(1100px - 60px);
+  background: #fff;
+  margin: 30px auto;
+  overflow: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.chat-header {
+  background: var(--dark-color-a);
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+  background: var(--dark-color-b);
+  color: #fff;
+  padding: 20px 20px 60px;
+  overflow-y: scroll;
+}
+
+.card-header {
+  margin-bottom: 15px;
+  background-color: var(--dark-color-a);
+  padding: 10px;
+}
+
+.chat-messages {
+  padding: 30px;
+  max-height: 440px;
+  overflow-y: scroll;
+}
+
+/* Chat section End */
+
+/*
+Layout
+*/
+.container {
+  width: 97%;
+  margin: 0.75rem auto;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0.2rem;
+}
+.col-1 {
+  width: calc(100% / 4);
+}
+.col-2 {
+  width: calc((100% * 2) / 4);
+}
+.col-3 {
+  width: calc((100% * 3) / 4);
+}
+.col-4 {
+  width: 100%;
+}
+/*
+List group
+*/
+.list {
+  padding-left: 0;
+
+  margin: 0 auto;
+
+  width: 100%;
+  color: #ffff;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 13px;
+  margin-top: 13px;
+}
+.list-item {
+  padding: 0.75rem;
+  margin-bottom: -1px;
+  background-color: var(--bg-color);
+  color: var(--light-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  width: calc(100% - 2.5rem);
+  margin: 10px 0px;
+  text-align: left;
+}
+.list-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.list-item:first-child {
+  width: calc(100% - 2.5rem);
+}
+/*
+input
+*/
+.input-addon {
+  display: flex;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+.input-addon-field {
+  flex: 1;
+}
+.input-addon-field:not(:first-child) {
+  border-left: 0;
+}
+.input-addon-field:not(:last-child) {
+  border-right: 0;
+}
+
+.input-addon-item {
+  background-color: rgba(147, 128, 108, 0.1);
+  color: #666666;
+  font: inherit;
+  font-weight: normal;
+}
+
+.input-addon-field,
+.input-addon-item {
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  padding: 0.5em 0.75em;
+}
+.input-addon-item[disabled] {
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  padding: 0.5em 0.75em;
+  background-color: gray;
+}
+.input-addon-field:first-child,
+.input-addon-item:first-child {
+  border-radius: 2px 0 0 2px;
+}
+.input-addon-field:last-child,
+.input-addon-item:last-child {
+  border-radius: 0 2px 2px 0;
+}
+.drop {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  border: solid 1px #ccc;
+  /* border-radius: .5rem; */
+  margin-top: 10px;
+  text-align: center;
+}
+.files {
+  width: 100%;
+  height: 200px;
+  border: solid 1px #ccc;
+  border-radius: 0.5rem;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+.box {
+  width: 100px;
+
+  border: solid 1px #ccc;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+.box span {
+  display: block;
+  text-align: center;
+}
+
+.card-body {
+  padding: 10px;
+}
+.card-header {
+  text-align: center;
+  padding: 10px;
+  padding-top: 25px;
+  border-bottom: 1px solid var(--dark-color-b);
+  color: var(--light-color);
+}
+
+.chat-box {
+  width: 60%;
+  margin: 0 auto;
+  min-height: 400px;
+  display: flex;
+}
+.user-list-box {
+  width: 30%;
+  min-height: 570px;
+  background: var(--dark-color-a);
+  overflow-y: auto !important;
+}
+
+.msg-history {
+  background: var(--light-color);
+  color: var(--dark-color-a);
+  min-height: 300px;
+  overflow-y: auto !important;
+}
+.input-btn-box {
+  margin-top: 12px;
+}
+
+.usr {
+  color: var(--success-color);
+}
+input#m {
+  width: 71%;
+  height: 42px;
+  padding: 0px 10px;
+}
+input#m:focus {
+  box-shadow: 0;
+}
+.btn-danger {
+  padding: 13px;
+  color: #ffff;
+  background: #c12a2a;
+  border: none;
+}
+.btn-danger:hover {
+  background: #3d1515;
+}
+.btn-primary {
+  padding: 13px;
+  color: #ffff;
+  background: #3f82a8;
+  border: none;
+}
+.btn-primary:hover {
+  background: #62cad8;
+}
+
+/* ======= */
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #493356;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #2f2138;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
